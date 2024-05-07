@@ -47,8 +47,7 @@ struct node* insert_at_begin (struct node* ptr, int data) {
   temp->link = ptr;
   ptr = temp; 
 
-  return ptr;
-
+    return ptr;
 }
 
 struct node* insert_at_last(struct node *ptr, int data) {
@@ -62,7 +61,6 @@ struct node* insert_at_last(struct node *ptr, int data) {
   return temp;
 
 }
-
 
 void display(struct node *ptr) {
   if(ptr == NULL) {
