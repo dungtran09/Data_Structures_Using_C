@@ -8,24 +8,26 @@ int main(int argc, char *argv[]) {
   
   int size = sizeof(listNumnbers) / sizeof(int);
 
+  // sorting
   insertion_sort(listNumnbers, size);
   
   // print affter sorted.
   for (int i = 0; i < size; i++) {
-    printf("%d ", listNumnbers[i]);
+    printf("%d %s", listNumnbers[i], "\n");
   }
+
   return 0;
 }
 
 void insertion_sort(int* listNumnbers, int size) {
-  for(int curr = 1; curr < size; curr++) {
-    int key = listNumnbers[curr];
-    int prev = curr - 1;
-    while (prev >= 0 && listNumnbers[prev] > key) {
-      listNumnbers[prev + 1] = listNumnbers[prev];
-      prev = prev - 1;
+  for(int currPos = 1; currPos < size; currPos++) {
+    int key = listNumnbers[currPos];
+    int prevPos = currPos - 1;
+    while (prevPos >= 0 && listNumnbers[prevPos] > key) {
+      listNumnbers[prevPos + 1] = listNumnbers[prevPos];
+      prevPos--;
     }
-    listNumnbers[prev + 1] = key;
+    listNumnbers[prevPos + 1] = key;
   }
-
 }
+
