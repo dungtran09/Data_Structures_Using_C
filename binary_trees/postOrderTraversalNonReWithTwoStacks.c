@@ -66,6 +66,11 @@ void postOrderTraversalWithTwoStack(struct Node *root) {
   }
 
   printf("\n");
+
+  free(stack1->nodes);
+  free(stack1->nodes);
+  free(stack1);
+  free(stack2);
 }
 int main() {
 

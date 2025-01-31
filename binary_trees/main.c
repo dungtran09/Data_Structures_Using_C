@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-  
-  printf("Hello Word!");
+
+  printf("Hello C");
 
   return EXIT_SUCCESS;
 }

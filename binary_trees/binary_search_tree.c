@@ -12,7 +12,7 @@ struct Node *searchElement(struct Node *, int);
 struct Node *createdTree(struct Node *);
 
 int main() {
-  struct Node *tree;
+  struct Node *tree = NULL;
   struct Node *root = createdTree(tree);
   root = (struct Node *)malloc(sizeof(struct Node));
   root->data = 10;

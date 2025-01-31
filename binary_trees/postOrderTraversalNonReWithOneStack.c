@@ -76,6 +76,9 @@ void postOrderWithOneStack(struct Node *root) {
     stack->prev = currentNode;
   }
   printf("\n");
+
+  free(stack->nodes);
+  free(stack);
 }
 
 int main() {
