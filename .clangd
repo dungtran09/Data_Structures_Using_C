@@ -1,0 +1,23 @@
+
+CompileFlags:
+  Add:
+    - "-IC:/ProgramData/chocolatey/lib/winlibs/tools/mingw64/x86_64-w64-mingw32/include"
+    - "-Wall"
+    - "--target=x86_64-w64-mingw64"
+
+  Conditional:
+    - If: ".*\\.cpp"
+      Add: ["-std=c++17"]
+    - If: ".*\\.c"
+      Add: ["-std=c11"]
+
+Diagnostics:
+  ClangTidy:
+    Add: [modernize-*]
+    Remove: []
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+

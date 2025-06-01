@@ -1,7 +1,6 @@
 #include <stdio.h>
-
-void merge_sort(int*, int, int);
-void merge(int*, int, int, int);
+void merge_sort(int *, int, int);
+void merge(int *, int, int, int);
 
 int main(int argc, char *argv[]) {
   int originList[] = {12, 3, 7, 9, 14, 6, 11, 2};
@@ -13,7 +12,7 @@ int main(int argc, char *argv[]) {
   for (int i = 0; i < right; i++) {
     printf("%d ", originList[i]);
   }
- 
+
   printf("\n%s \n", "After sorted: ");
   merge_sort(originList, left, right - 1);
 
@@ -21,14 +20,14 @@ int main(int argc, char *argv[]) {
   for (int i = 0; i < right; i++) {
     printf("%d ", originList[i]);
   }
-  
-  return 0;
 
+  return 0;
 }
 
-void merge_sort(int* originList, int left, int right) {
-  if (left >= right) return;
-  
+void merge_sort(int *originList, int left, int right) {
+  if (left >= right)
+    return;
+
   int mid = left + (right - left) / 2;
 
   merge_sort(originList, left, mid);
@@ -37,7 +36,7 @@ void merge_sort(int* originList, int left, int right) {
   merge(originList, left, mid, right);
 }
 
-void merge(int* originList, int left, int mid, int right) {
+void merge(int *originList, int left, int mid, int right) {
   int i, j, k;
   int sizeLeft = mid - left + 1;
   int sizeRight = right - mid;
@@ -50,7 +49,6 @@ void merge(int* originList, int left, int mid, int right) {
   for (j = 0; j < sizeRight; j++) {
     rightList[j] = originList[mid + j + 1];
   }
-  
 
   i = 0, j = 0;
   k = left;
